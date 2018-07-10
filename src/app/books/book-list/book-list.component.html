@@ -1,0 +1,17 @@
+<div class="row align-items-center justify-content-between">
+    <div class="col-4">
+      Books
+    </div>
+    <div class="col-4">
+      <a class="btn btn-primary btn-sm" routerLink="/books/new">Create</a>
+    </div>
+  </div>
+  <hr />
+  <ul class="list-group">
+    <li class="list-group-item" 
+    *ngFor = "let book of books"
+    [routerLink]="['/books', book.id]">
+      {{book.title}}
+    </li>
+  </ul>
+  
